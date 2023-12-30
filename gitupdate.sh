@@ -8,5 +8,5 @@ git add .
 git commit -m "Last update for Arch installation scripts"
 
 
-git remote add origin git@github.com:apollotash/ArchScripts.git
+#git remote add origin git@github.com:apollotash/ArchScripts.git
 git push -u origin master
