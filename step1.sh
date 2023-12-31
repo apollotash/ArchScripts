@@ -1,3 +1,5 @@
+#!/bin/bash
+#These scirpts made by Apollo to make Arch Linux installation esaier and faster.
 echo "Hello. Welcome to your Arch Linux intall script!"
 
 setfont ter-224b.psf.gz
@@ -29,7 +31,7 @@ pacstrap /mnt base base-devel linux linux-firmware mesa mesa-utils linux-headers
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
-curl -o step-2.sh https://raw.githubusercontent.com/apollotash/dotfiles/main/arch-scripts/step-2.sh
+curl -o step-2.sh https://github.com/apollotash/ArchScripts/blob/master/step2.sh
 
 chmod +x step-2.sh
 

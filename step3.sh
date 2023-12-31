@@ -2,9 +2,14 @@ cd /home/apollo
 
 sudo pacman -Syu
 
-git clone https://github.com/apollotash/Wallpapers.git
+mkdir GitRepos
+mv ArchScripts ./GitRepos
+cd GitRepos
+git clone git@github.com:apollotash/Wallpapers.git
+git clone git@github.com:apollotash/Extras.git
+git clone git@github.com:apollotash/dotfiles.git
 
-
+cd ..
 sudo vim /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
@@ -13,36 +18,36 @@ sudo pacman -S bluez bluez-utils cups alsa-utils pulseaudio pulseaudio-bluetooth
 
 
 
-sudo cp ./dotfiles/systemConfigFilesAndLocation/00-keyboard.conf /etc/X11/xorg.conf.d
+sudo cp ./GitRepos/Extras/systemConfigFilesAndLocation/00-keyboard.conf /etc/X11/xorg.conf.d
 
-sudo cp ./dotfiles/systemConfigFilesAndLocation/lightdm-gtk-greeter.conf /etc/lightdm
+sudo cp ./GitRepos/Extras/systemConfigFilesAndLocation/lightdm-gtk-greeter.conf /etc/lightdm
 
-sudo cp ./dotfiles/systemConfigFilesAndLocation/NetworkManager.conf /etc/NetworkManager
+sudo cp ./GitRepos/Extras/systemConfigFilesAndLocation/NetworkManager.conf /etc/NetworkManager
 
-sudo cp ./dotfiles/systemConfigFilesAndLocation/30-touchpad.conf /etc/X11/xorg.conf.d
+sudo cp ./GitRepos/Extras/systemConfigFilesAndLocation/30-touchpad.conf /etc/X11/xorg.conf.d
 
-sudo cp ./dotfiles/systemConfigFilesAndLocation/index.theme /usr/share/icons/default/index.theme
+sudo cp ./GitRepos/Extras/systemConfigFilesAndLocation/index.theme /usr/share/icons/default/index.theme
 
 sudo mkdir /usr/share/backgrounds
-sudo cp ./Wallpapers/7.jpg /usr/share/backgrounds/7.jpg
+sudo cp ./GitRepos/Wallpapers/7.jpg /usr/share/backgrounds/7.jpg
 
 
-cd /home/apollo/dotfiles
+cd ./GitRepos/dotfiles
 
-cp .bash_aliases .bash_profile .bashrc .gitconfig .gtkrc-2.0 .vimrc .xprofile /home/apollo/
+cp .bash_aliases .bash_profile .bashrc .gitconfig .gtkrc-2.0 .vimrc .xprofile ~
 
-cp -r .icons/ /home/apollo
+cp -r .icons/ ~
 
 cd .config
 
-mkdir /home/apollo/.config
+mkdir ~/.config
 
-cp ktouch2rc /home/apollo/.config
+cp ktouch2rc ~/.config
 
-cp -r alacritty/ bspwm/ fish/ nautilus/ nitrogen/ nvim/ polybar/ rofi/ sxhkd/ /home/apollo/.config
+cp -r alacritty/ bspwm/ fish/ nautilus/ nitrogen/ nvim/ polybar/ rofi/ sxhkd/ ~/.config
 
 
-cd /home/apollo
+cd ~
 
 
 sudo systemctl enable bluetooth
