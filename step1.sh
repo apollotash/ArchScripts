@@ -31,17 +31,17 @@ pacstrap /mnt base base-devel linux linux-firmware mesa mesa-utils linux-headers
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
-curl -o step-2.sh https://github.com/apollotash/ArchScripts/blob/master/step2.sh
+curl -o step2.sh https://github.com/apollotash/ArchScripts/blob/master/step2.sh
 
-chmod +x step-2.sh
+chmod +x step2.sh
 
-cp step-2.sh /mnt
+cp step2.sh /mnt
 
-arch-chroot /mnt ./step-2.sh
+arch-chroot /mnt ./step2.sh
 
-rm /mnt/step-2.sh
+rm /mnt/step2.sh
 
-rm step-2.sh
+rm step2.sh
 
 umount -l /mnt
 
