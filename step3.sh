@@ -13,7 +13,7 @@ cd ..
 sudo vim /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
-sudo pacman -S bluez bluez-utils cups alsa-utils pulseaudio pulseaudio-bluetooth neofetch xdg-utils xdg-user-dirs at ttf-droid adapta-gtk-theme gtk-engine-murrine papirus-icon-theme ttf-font-awesome ttf-dejavu xorg fish ranger bspwm sxhkd polybar lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings lxappearance nitrogen cmatrix alacritty blueman thunar gnome-calculator scrot opera-ffmpeg-codecs quadrapassel slock xautolock numlockx openssh gnome-system-monitor firefox htop picom ktouch gedit fortune-mod rofi dmenu whois vlc gimp opera neovim eog xcursor-comix evince transmission-gtk calcurse gnome-disk-utility libreoffice-still python-pip code openvpn rhythmbox mtpfs brightnessctl gvfs-mtp virtualbox virtualbox-host-modules-arch thunar-archive-plugin file-roller
+sudo pacman -S bluez bluez-utils cups alsa-utils pulseaudio pulseaudio-bluetooth neofetch xdg-utils xdg-user-dirs at ttf-droid adapta-gtk-theme gtk-engine-murrine papirus-icon-theme ttf-font-awesome ttf-dejavu xorg fish ranger bspwm sxhkd polybar lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings lxappearance nitrogen cmatrix alacritty blueman thunar gnome-calculator scrot opera-ffmpeg-codecs quadrapassel slock xautolock numlockx openssh gnome-system-monitor firefox htop picom ktouch gedit fortune-mod rofi dmenu whois vlc gimp neovim eog xcursor-comix evince transmission-gtk calcurse gnome-disk-utility libreoffice-still python-pip code openvpn rhythmbox mtpfs brightnessctl gvfs-mtp virtualbox virtualbox-host-modules-arch thunar-archive-plugin file-roller
 
 
 
