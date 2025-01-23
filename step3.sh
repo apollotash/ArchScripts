@@ -57,6 +57,6 @@ sudo systemctl enable cups
 
 sudo systemctl enable lightdm
 
-sudo chsh -s /usr/bin/fish
+chsh -s /usr/bin/fish
 
 exit
