@@ -6,9 +6,9 @@ sudo pacman -Syu
 mkdir GitRepos
 mv ArchScripts ./GitRepos
 cd GitRepos
-git clone git@github.com:apollotash/Wallpapers.git
-git clone git@github.com:apollotash/Extras.git
-git clone git@github.com:apollotash/dotfiles.git
+git clone https://github.com/apollotash/Wallpapers.git
+git clone https://github.com/apollotash/Extras.git
+git clone https://github.com/apollotash/dotfiles.git
 
 cd ..
 sudo vim /etc/default/grub
