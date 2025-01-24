@@ -25,6 +25,9 @@ sudo cp ./GitRepos/Extras/systemConfigFilesAndLocation/lightdm-gtk-greeter.conf 
 
 sudo cp ./GitRepos/Extras/systemConfigFilesAndLocation/NetworkManager.conf /etc/NetworkManager
 
+sudo rm /etc/resolv.conf
+sudo cp ./GitRepos/Extras/systemConfigFilesAndLocation/resolv.conf /etc
+
 sudo cp ./GitRepos/Extras/systemConfigFilesAndLocation/30-touchpad.conf /etc/X11/xorg.conf.d
 
 sudo cp ./GitRepos/Extras/systemConfigFilesAndLocation/index.theme /usr/share/icons/default/index.theme
@@ -50,7 +53,18 @@ cp -r alacritty/ bspwm/ fish/ nautilus/ nitrogen/ nvim/ polybar/ rofi/ sxhkd/ ~/
 
 cd ~
 
+mkdir Aur
+cd Aur
+git clone https://aur.archlinux.org/opera.git
+cd opera
+makepkg -si
 
+cd ..
+git clone https://aur.archlinux.org/opera-ffmpeg-codecs.git
+cd opera-ffmpeg-codecs
+makepkg -si
+
+cd ~
 sudo systemctl enable bluetooth
 
 sudo systemctl enable cups
